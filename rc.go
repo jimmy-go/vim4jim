@@ -35,6 +35,10 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 " YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
+" neocomplete
+Plugin 'Shougo/neocomplete'
+" vim-go
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -623,9 +627,14 @@ noremap <leader>inc <C-A>
 " Working with Go
 "------------------------------------------------------------------------------
 
+" useful shortcuts
 nmap 1 :GoImports<cr>:GoFmt<cr>:GoLint<cr>
 nmap 2 :GoBuild<cr>
 " ToDo: add analysis tools here
 " indent file
 nmap F gg=G''
+
+" I use godef because guru complains about files NOT in $GOROOT,$GOPATH
+let g:go_def_mode = 'godef'
+
 

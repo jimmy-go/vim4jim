@@ -12,10 +12,31 @@ Install with:
 sh ~/.vim4jim/install.sh
 ```
 
+Now test your installation with: ```vim -u ~/.vim4jim/rc.go```
+
+Vim plugin install:
+```
+#inside vim
+:PluginInstall
+```
+
+Go binaries install:
+```
+#inside vim
+:GoInstallBinaries
+```
+
 Done!
 
-Now test your installation is working with: vim -u ~/.vim4jim/rc.go
+## Credits
 
+* Go Authors for official vim plugins
+* Gocode, Godef, Golint, Guru, Goimports, Gotags, Errcheck projects and
+  authors of those projects.
+* [Contributors](https://github.com/fatih/vim-go/graphs/contributors) of vim-go
+* http://farazdagi.com/blog/2015/vim-as-golang-ide/
+
+## License
 
 The MIT License (MIT)
 
