@@ -1,5 +1,8 @@
 #### Vim configuration settings for Go and others languages.
 
+![preview pic](https://github.com/jimmy-go/vim4jim/blob/master/preview.png)
+iterm2 - Solarized dark
+
 #####Installation (working on os x Yosemite, be careful with other platforms):
 
 a) First clone the repo:
