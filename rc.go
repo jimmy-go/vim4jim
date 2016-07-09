@@ -1,5 +1,15 @@
 " define runtime for your case
-set runtimepath^=~/.vim4jim 
+set runtimepath^=~/.vim4jim
+
+"------------------------------------------------------------------------------
+" Useful shortcuts over time
+"------------------------------------------------------------------------------
+" this area is for new shortcuts and easy learning curve (if possible).
+
+" change between buffers
+" :b <name> tab for completion
+" return prev buffer
+" ,,
 
 "------------------------------------------------------------------------------
 " Vundle
@@ -114,7 +124,7 @@ nnoremap JJJJ <nop>
 "------------------------------------------------------------------------------
 
 " Make sure that coursor is always vertically centered on j/k moves
-set so=999
+" set so=999
 
 " add vertical lines on columns
 set colorcolumn=80,120
