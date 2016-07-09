@@ -1,26 +1,26 @@
 #### Vim configuration settings for Go and others languages.
 
-#####Installation:
+#####Installation (working on os x Yosemite, be careful with other platforms):
 
-First clone the repo:
+a) First clone the repo:
 ```
 git clone https://github.com/jimmy-go/vim4jim ~/.vim4jim
 ```
 
-Install with:
+b) Install with:
 ```
 sh ~/.vim4jim/install.sh
 ```
 
 Now test your installation with: ```vim -u ~/.vim4jim/rc.go```
 
-Vim plugin install:
+c) Vim plugin install:
 ```
 #inside vim
 :PluginInstall
 ```
 
-Go binaries install:
+d) Go binaries install:
 ```
 #inside vim
 :GoInstallBinaries
