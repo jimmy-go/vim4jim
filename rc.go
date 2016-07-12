@@ -223,7 +223,9 @@ set nrformats=octal,hex,alpha
 " Enable syntax highlighting
 " syntax enable
 set background=dark
-colorscheme solarized
+
+" Colorscheme taken from iterm2 solarized - dark. So no colorscheme is required.
+colorscheme default
 syntax off
 
 " Set extra options when running in GUI mode

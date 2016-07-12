@@ -1,7 +1,7 @@
 #### Vim configuration settings for Go and others languages.
 
 ![preview pic](https://github.com/jimmy-go/vim4jim/blob/master/preview.png)
-iterm2 - Solarized dark
+vim4jim, htop and lsof on [iTerm2](http://iterm2.com) - Solarized dark theme.
 
 #####Installation (working on os x Yosemite, be careful with other platforms):
 
@@ -16,6 +16,7 @@ sh ~/.vim4jim/install.sh
 ```
 
 Now test your installation with: ```vim -u ~/.vim4jim/rc.go```
+. You can add an alias too: ```alias vim4jim='vim -u ~/.vim4jim/rc.go'```
 
 c) Vim plugin install:
 ```
@@ -37,7 +38,8 @@ Done!
 * Gocode, Godef, Golint, Guru, Goimports, Gotags, Errcheck projects and
   authors of those projects.
 * [Contributors](https://github.com/fatih/vim-go/graphs/contributors) of vim-go
-* http://farazdagi.com/blog/2015/vim-as-golang-ide/
+* [http://farazdagi.com/blog/2015/vim-as-golang-ide/](http://farazdagi.com/blog/2015/vim-as-golang-ide/)
+* [Solarized theme](http://ethanschoonover.com/solarized)
 
 ## License
 
