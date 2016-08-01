@@ -1,6 +1,6 @@
 #### Vim configuration settings for Go and others languages.
 
-![preview pic](https://github.com/jimmy-go/vim4jim/blob/master/preview.png)
+![preview pic](https://github.com/jimmy-go/vim4jim/blob/master/preview.png?1)
 vim4jim, htop and lsof on [iTerm2](http://iterm2.com) - Solarized dark theme.
 
 #####Installation (working on os x Yosemite, be careful with other platforms):

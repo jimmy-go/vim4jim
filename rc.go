@@ -649,4 +649,29 @@ nmap F gg=G''
 " I use godef because guru complains about files NOT in $GOROOT,$GOPATH
 let g:go_def_mode = 'godef'
 
+"------------------------------------------------------------------------------
+" Erlang
+"------------------------------------------------------------------------------
+
+" omnicomplete
+set rtp+=~/.vim4jim/bundle/vim-erlang-omnicomplete
+
+" compiler
+set rtp+=~/.vim4jim/bundle/vim-erlang-compiler
+
+" runtime
+set rtp+=~/.vim4jim/bundle/vim-erlang-runtime
+
+"------------------------------------------------------------------------------
+" C
+"------------------------------------------------------------------------------
+
+let &path.="src/include,/usr/include/AL,"
+let g:ycm_global_ycm_extra_conf = "~/.vim4jim/ycm_extra_conf.py"
+
+"------------------------------------------------------------------------------
+" Empty space
+"------------------------------------------------------------------------------
+
+
 
