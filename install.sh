@@ -1,13 +1,13 @@
 #!/bin/sh
 
-echo "	Vim4Jim" 
+echo "	Vim4Jim"
 echo "	A vim profile for development in Go (golang) with my custom preferences"
 echo ""
 
 export V_JIM_INSTALL_DIR=$HOME/.vim4jim
 # If working directory is not defined then use user's $HOME
 
-Q="Do you want vim4jim to be installed on '$V_JIM_INSTALL_DIR'? y/n: " 
+Q="Do you want vim4jim to be installed on '$V_JIM_INSTALL_DIR'? y/n: "
 
 while true; do
     read -p "$Q" yn
@@ -38,7 +38,7 @@ git clone https://github.com/Valloric/YouCompleteMe.git $V_JIM_INSTALL_DIR/bundl
 echo "	Installing YouCompleteMe with support for all languages"
 cd $V_JIM_INSTALL_DIR/bundle/YouCompleteMe
 echo "	Downloading YCM third party, this can take a while"
-git submodule update --init --recursive 
+git submodule update --init --recursive
 $V_JIM_INSTALL_DIR/bundle/YouCompleteMe/install.py --all
 
 # install erlang
