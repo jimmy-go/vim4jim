@@ -116,7 +116,7 @@ vmap <Leader>w <ESC><ESC>:w<CR>
 command W w !sudo tee % > /dev/null
 
 " This is totally awesome - remap jj to escape in insert mode.  You'll never type jj anyway, so it's great!
-inoremap jj <esc>
+inoremap jjj <esc>
 nnoremap JJJJ <nop>
 
 "------------------------------------------------------------------------------
@@ -192,7 +192,9 @@ set hlsearch
 set incsearch
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw
+" set lazyredraw
+" Let's see what does this
+set nolazyredraw
 
 " For regular expressions turn magic on
 set magic
@@ -646,21 +648,21 @@ nmap 2 :GoBuild<cr>
 " indent file
 nmap F gg=G''
 
-" I use godef because guru complains about files NOT in $GOROOT,$GOPATH
-let g:go_def_mode = 'godef'
+" Edit; changed to guru, lets see what happen.
+let g:go_def_mode = 'guru'
 
 "------------------------------------------------------------------------------
 " Erlang
 "------------------------------------------------------------------------------
 
 " omnicomplete
-set rtp+=~/.vim4jim/bundle/vim-erlang-omnicomplete
+"set rtp+=~/.vim4jim/bundle/vim-erlang-omnicomplete
 
 " compiler
-set rtp+=~/.vim4jim/bundle/vim-erlang-compiler
+"set rtp+=~/.vim4jim/bundle/vim-erlang-compiler
 
 " runtime
-set rtp+=~/.vim4jim/bundle/vim-erlang-runtime
+"set rtp+=~/.vim4jim/bundle/vim-erlang-runtime
 
 "------------------------------------------------------------------------------
 " C

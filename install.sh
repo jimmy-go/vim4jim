@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "	Vim4Jim" 
+echo "	Vim4Jim"
 echo "	A vim profile for development in Go (golang) with my custom preferences"
 echo ""
 
