@@ -3,7 +3,7 @@
 ![preview pic](https://github.com/jimmy-go/vim4jim/blob/master/preview.png?1)
 vim4jim, htop and lsof on [iTerm2](http://iterm2.com) - Solarized dark theme.
 
-#####Installation (working on os x Yosemite, be careful with other platforms):
+####Installation (tested and working on OS X Yosemite, be careful with other platforms):
 
 a) First clone the repo:
 ```
@@ -12,6 +12,7 @@ git clone https://github.com/jimmy-go/vim4jim ~/.vim4jim
 
 b) Install with:
 ```
+# will install YCM with support for all languages.
 sh ~/.vim4jim/install.sh
 ```
 
@@ -32,7 +33,7 @@ d) Go binaries install:
 
 Done!
 
-## Credits
+#### Credits
 
 * Go Authors for official vim plugins
 * Gocode, Godef, Golint, Guru, Goimports, Gotags, Errcheck projects and
@@ -41,7 +42,7 @@ Done!
 * [http://farazdagi.com/blog/2015/vim-as-golang-ide/](http://farazdagi.com/blog/2015/vim-as-golang-ide/)
 * [Solarized theme](http://ethanschoonover.com/solarized)
 
-## License
+#### License
 
 The MIT License (MIT)
 

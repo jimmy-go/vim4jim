@@ -20,6 +20,7 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim4jim/bundle/Vundle.vim
+
 " call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 call vundle#begin('~/.vim4jim/bundle')
@@ -27,32 +28,19 @@ call vundle#begin('~/.vim4jim/bundle')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
 " YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
+
 " neocomplete
 Plugin 'Shougo/neocomplete'
+
 " vim-go
 Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -578,7 +566,7 @@ let g:syntastic_check_on_wq = 0
 " Vim-go
 "------------------------------------------------------------------------------
 
-let g:go_fmt_fail_silently = 1
+let g:go_fmt_fail_silently = 0
 
 " Show a list of interfaces which is implemented by the type under your cursor
 au FileType go nmap <Leader>s <Plug>(go-implements)
@@ -601,9 +589,12 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 
 " By default syntax-highlighting for Functions, Methods and Structs is disabled.
 " Let's enable them!
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
+let g:go_highlight_functions = 0
+let g:go_highlight_methods = 0
+let g:go_highlight_structs = 0
+let g:go_highlight_operators = 0
+let g:go_highlight_build_constraints = 0
+let g:go_fmt_command = "goimports"
 
 "------------------------------------------------------------------------------
 " Extended
@@ -642,8 +633,9 @@ noremap <leader>inc <C-A>
 "------------------------------------------------------------------------------
 
 " useful shortcuts
-nmap 1 :GoImports<cr>:GoFmt<cr>:GoLint<cr>
-nmap 2 :GoBuild<cr>
+nmap º1 :GoImports<cr>:GoFmt<cr>:GoMetaLinter<cr>
+nmap º2 :GoBuild<cr>
+
 " ToDo: add analysis tools here
 " indent file
 nmap F gg=G''
