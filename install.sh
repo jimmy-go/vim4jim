@@ -55,5 +55,5 @@ echo "  Cloning erlang-runtime"
 git clone https://github.com/vim-erlang/vim-erlang-runtime $V_JIM_INSTALL_DIR/bundle/vim-erlang-runtime
 
 echo "	Install done"
-echo "test with 'vim -u ~/.vim4jim/rc.go'"
+echo "test with 'vim -u ~/.vim4jim/vimgo.rc'"
 
