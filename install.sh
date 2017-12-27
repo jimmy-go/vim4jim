@@ -43,21 +43,6 @@ echo "	Downloading YCM third party, this can take a while"
 git submodule update --init --recursive
 $INSTALL_DIR/bundle/YouCompleteMe/install.py --all
 
-# NOTE: support for 
-
-# install erlang
-# omnicomplete
-echo "  Cloning erlang-omnicomplete"
-git clone https://github.com/vim-erlang/vim-erlang-omnicomplete $INSTALL_DIR/bundle/vim-erlang-omnicomplete
-
-# compiler
-echo "  Cloning erlang-compiler"
-git clone https://github.com/vim-erlang/vim-erlang-compiler $INSTALL_DIR/bundle/vim-erlang-compiler
-
-# runtime
-echo "  Cloning erlang-runtime"
-git clone https://github.com/vim-erlang/vim-erlang-runtime $INSTALL_DIR/bundle/vim-erlang-runtime
-
 echo "	Install done"
 echo "test with 'vim -u ~/.vim4jim/vimgo.rc'"
 
