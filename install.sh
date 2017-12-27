@@ -60,4 +60,8 @@ fi
 echo "·WITH ALL"
 $BIN --all
 
+echo "Install gometalinter"
+go get -u github.com/alecthomas/gometalinter
+gometalinter --install
+
 echo "	Install done"
