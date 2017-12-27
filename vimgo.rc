@@ -40,6 +40,9 @@ Plugin 'fatih/vim-go'
 " WAKA time
 Plugin 'wakatime/vim-wakatime'
 
+" ELM
+Plugin 'elmcast/elm-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -635,6 +638,8 @@ noremap <leader>inc <C-A>
 " Working with Go
 "------------------------------------------------------------------------------
 
+let g:go_metalinter_deadline = "50s"
+
 " useful shortcuts
 nmap º1 :GoImports<cr>:GoFmt<cr>:GoMetaLinter<cr>
 nmap º2 :GoBuild<cr>
@@ -665,6 +670,14 @@ let g:go_def_mode = 'guru'
 
 let &path.="src/include,/usr/include/AL,"
 let g:ycm_global_ycm_extra_conf = "~/.vim4jim/ycm_extra_conf.py"
+
+"------------------------------------------------------------------------------
+" ELM
+"------------------------------------------------------------------------------
+
+let g:ycm_semantic_triggers = {
+\ 'elm' : ['.'],
+\}
 
 "------------------------------------------------------------------------------
 " Empty space

@@ -1,22 +1,21 @@
 #!/bin/sh
 
 echo "	Vim4Jim"
-echo "	A vim profile for development in Go (golang) with my custom preferences"
-echo ""
+echo "	Vim settings for development in Go (golang)."
 
 export INSTALL_DIR=$HOME/.vim4jim
 # If working directory is not defined then use user's $HOME
 
-Q="Do you want vim4jim to be installed on '$INSTALL_DIR'? y/n: "
+Q="Do you want vim4jim to be installed on '$INSTALL_DIR'? [Y]es [N]o: "
 
 while true; do
     read -p "$Q" yn
     case $yn in
-	[Yy]* )
-		# default action
-		break;;
-	[Nn]* ) echo "abort install"; exit;;
-	* ) echo "$Q";;
+        [Yy]* )
+            # default action
+            break;;
+        [Nn]* ) echo "abort install"; exit;;
+        * ) echo "$Q";;
     esac
 done
 
@@ -41,23 +40,28 @@ cd $INSTALL_DIR/bundle/YouCompleteMe
 
 echo "	Downloading YCM third party, this can take a while"
 git submodule update --init --recursive
-$INSTALL_DIR/bundle/YouCompleteMe/install.py --all
 
-# NOTE: support for 
+BIN=$INSTALL_DIR/bundle/YouCompleteMe/install.py
 
-# install erlang
-# omnicomplete
-echo "  Cloning erlang-omnicomplete"
-git clone https://github.com/vim-erlang/vim-erlang-omnicomplete $INSTALL_DIR/bundle/vim-erlang-omnicomplete
+## NOTE: Enable this section for debug.
+if [ "$1" == "debug" ]; then
+    echo "·WITH clang"
+    $BIN --clang-completer
+    echo "·WITH mono"
+    $BIN --cs-completer
+    echo "·WITH go"
+    $BIN --go-completer
+    echo "·WITH js"
+    $BIN --js-completer
+    echo "·WITH rust"
+    $BIN --rust-completer
+fi
 
-# compiler
-echo "  Cloning erlang-compiler"
-git clone https://github.com/vim-erlang/vim-erlang-compiler $INSTALL_DIR/bundle/vim-erlang-compiler
+echo "·WITH ALL"
+$BIN --all
 
-# runtime
-echo "  Cloning erlang-runtime"
-git clone https://github.com/vim-erlang/vim-erlang-runtime $INSTALL_DIR/bundle/vim-erlang-runtime
+echo "Install gometalinter"
+go get -u github.com/alecthomas/gometalinter
+gometalinter --install
 
 echo "	Install done"
-echo "test with 'vim -u ~/.vim4jim/vimgo.rc'"
-
